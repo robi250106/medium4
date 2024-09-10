@@ -6,6 +6,7 @@ use App\Http\Controllers\MembershipController;
 use App\Http\Controllers\SignController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\WriteController;
+use App\Http\Controllers\GetStartedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,4 @@ Route::get('/sign-up', [SignController::class,'index'])->name('sign');
 Route::get('/login', [SignController::class,'index'])->name('login');
 Route::get('/story', [StoryController::class,'index'])->name('story');
 Route::get('/write', [WriteController::class,'index'])->name('write');
-
+Route::get('/get-started', [GetStartedController::class, 'index'])->name('get-started');

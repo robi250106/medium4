@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light" style="border-bottom: 1px solid black; border-left: transparent; border-right: transparent; border-top: transparent;">
+<nav class="navbar navbar-expand-lg bg-secondary" style="border-bottom: 1px solid black; border-left: transparent; border-right: transparent; border-top: transparent;">
   <div class="container-fluid">
     <a class="navbar-brand ms-5" href="{{ route('home') }}" style="font-size: 2em;font-weight:700;">
       Medium
@@ -23,9 +23,12 @@
             Write</a>
         </li>
         <li class="nav-item me-3">
-          <a class="nav-link {{ (request()->is('sign*')) ? 'active' : '' }}" href="{{ route('sign') }}">
+          <a class="nav-link {{ (request()->is('sign*')) ? 'active' : '' }} text-black" href="{{ route('sign') }}">
             Sign In
           </a>
+        </li>
+        </li>
+            </a>
         </li>
         <li class="nav-item me-3">
           <a class="btn btn-light rounded-pill bg-dark" style="color: #fff" href="#">Get Started</a>
