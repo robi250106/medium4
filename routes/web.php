@@ -25,5 +25,9 @@ Route::get('/membership', [MembershipController::class,'index'])->name('member')
 Route::get('/sign-up', [SignController::class,'index'])->name('sign');
 Route::get('/login', [SignController::class,'index'])->name('login');
 Route::get('/story', [StoryController::class,'index'])->name('story');
-Route::get('/write', [WriteController::class,'index'])->name('write');
+
+Route::controller(WriteController::class)->group(function(){
+    Route::get('/write', 'index')->name('write');
+    Route::post('/write', 'store')->name('write.store');
+});
 Route::get('/get-started', [GetStartedController::class, 'index'])->name('get-started');
